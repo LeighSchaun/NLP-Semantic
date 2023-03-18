@@ -1,0 +1,20 @@
+The output from the code above shows interesting inferences about the similarities between cat, monkey, and banana. It is fascinating that the model recognizes that monkeys eat bananas and, therefore, identifies a significant similarity between the two words. Additionally, the model recognizes that both cat and monkey are animals, but it does not explicitly recognize the relationship between monkeys and bananas. It is also noteworthy that cat does not have any significant similarity with any of the fruits, showing that the model does not recognize transitive relationships explicitly.
+Example of my own:
+Suppose we have the following list of words: "car," "train," "bicycle," "airplane," and "boat." my code extract to compare the similarity between the words below:
+
+
+tokens = nlp('car train bicycle airplane boat')
+for token1 in tokens:
+    for token2 in tokens:
+        print(token1.text, token2.text, token1.similarity(token2))
+
+
+
+
+
+
+
+
+The output from the code shows that "car" and "train" have a higher similarity than "car" and "bicycle" because they are both related to transportation by land. Similarly, "airplane" and "boat" have a lower similarity than "airplane" and "train" because they are related to transportation by air and water, respectively.
+
+After I tested the example file with a simpler language model called 'en_core_web_sm', I noticed that it was faster at processing the text compared to the 'en_core_web_md' model. However, I also noticed that the 'en_core_web_sm' model was less accurate at identifying similarities between complaints and recipes. Some similarities that were easy to spot with the 'en_core_web_md' model were not as noticeable with the 'en_core_web_sm' model. This might be because the 'en_core_web_sm' model is smaller than the 'en_core_web_md' model, so it has fewer parts to work with and might not be able to recognize as many small details in the text as the larger model.
