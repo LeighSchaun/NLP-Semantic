@@ -21,7 +21,10 @@ The second example demonstrates how to work with sentences in Spacy. It compares
 
 To run the program, simply run the following command in your terminal:
 
+pip install spacy
+python -m spacy download en_core_web_md
+
 Copy code
-python spacy_example.py
+python example.py
 Note
 This is just a simple example to demonstrate some basic functionalities of the Spacy library. Spacy has many more powerful features and capabilities for natural language processing, and I encourage you to explore them further.
